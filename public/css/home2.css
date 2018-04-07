@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body {
+  font-family: 'Roboto', Arial;
+  background-color: #f3f7f8;
+}
+
+h2 {
+  text-align: center;
+  color: ghostwhite;
+  text-decoration: underline;
+}
+
+#pie{
+  justify-content: center;
+}
+
+.container1 {
+  display: flex;
+  /*justify-content: center;*/
+}
+.container1 .pie-ui {
+  position: relative;
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 20px;
+}
+.container1 .pie-ui .pie-slice {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 5px black;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: ghostwhite;
+}
+.container1 .pie-ui .pie-slice.active {
+  z-index: 11;
+  top: 125px !important;
+  left: -246% !important;
+  border-radius: 0px !important;
+  width: 600px;
+  height: 400px !important;
+  -webkit-transform: rotate(0deg) !important;
+}
+.container1 .pie-ui .pie-slice.active.top {
+  background-color: #A4031F !important;
+}
+.container1 .pie-ui .pie-slice.active.right {
+  background-color: #BE5A38 !important;
+}
+.container1 .pie-ui .pie-slice.active.bottom {
+  background-color: #241E4E !important;
+}
+.container1 .pie-ui .pie-slice.active.left {
+  background-color: #064E86 !important;
+}
+.container1 .pie-ui .pie-slice.active i {
+  margin: 10px !important;
+  color: ghostwhite !important;
+  font-size: 22pt;
+}
+.container1 .pie-ui .pie-slice.active i:not(.close-slice) {
+  -webkit-transform: rotate(0deg) !important;
+}
+.container1 .pie-ui .pie-slice.active i.close-slice {
+  display: block;
+  float: right;
+  transition: all 0.2s;
+}
+.container1 .pie-ui .pie-slice.active i.close-slice:hover {
+  -webkit-transform: scale(1.3) rotate(360deg);
+}
+.container1 .pie-ui .pie-slice i:not(.close-slice) {
+  -webkit-transform: rotate(-45deg);
+}
+.container1 .pie-ui .pie-slice i.close-slice {
+  display: none;
+}
+.container1 .pie-ui .pie-slice.bg-color.top {
+  background-color: #dea4af;
+}
+.container1 .pie-ui .pie-slice.bg-color.right {
+  background-color: #e8c4b8;
+}
+.container1 .pie-ui .pie-slice.bg-color.bottom {
+  background-color: #b0aebf;
+}
+.container1 .pie-ui .pie-slice.bg-color.left {
+  background-color: #a6bfd3;
+}
+.container1 .pie-ui .pie-slice.bg-color:hover {
+  color: white;
+}
+.container1 .pie-ui .pie-slice.icon-color:hover.top {
+  color: #A4031F;
+  font-size: 15pt;
+}
+.container1 .pie-ui .pie-slice.icon-color:hover.right {
+  color: #BE5A38;
+  font-size: 15pt;
+}
+.container1 .pie-ui .pie-slice.icon-color:hover.bottom {
+  color: #241E4E;
+  font-size: 15pt;
+}
+.container1 .pie-ui .pie-slice.icon-color:hover.left {
+  color: #064E86;
+  font-size: 15pt;
+}
+.container1 .pie-ui .pie-slice.scale:not(.active):hover {
+  width: 60px;
+  height: 60px;
+  z-index: 10;
+}
+.container1 .pie-ui .pie-slice.top {
+  top: 0;
+  left: 25%;
+  border-top-left-radius: 50px;
+  -webkit-transform: rotate(45deg);
+}
+.container1 .pie-ui .pie-slice.top i {
+  margin-top: 40%;
+  margin-left: 45%;
+}
+.container1 .pie-ui .pie-slice.top:hover.scale {
+  left: 20%;
+}
+.container1 .pie-ui .pie-slice.top:hover.bg-color:not(.active) {
+  background-color: #A4031F;
+}
+.container1 .pie-ui .pie-slice.right {
+  top: 35%;
+  right: -11%;
+  border-top-left-radius: 50px;
+  -webkit-transform: rotate(135deg);
+}
+.container1 .pie-ui .pie-slice.right i:not(.close-slice) {
+  -webkit-transform: rotate(225deg);
+  margin-top: 46%;
+  margin-left: 40%;
+}
+.container .pie-ui .pie-slice.right:hover.scale {
+  top: 30%;
+}
+.container1 .pie-ui .pie-slice.right:hover.bg-color:not(.active) {
+  background-color: #BE5A38;
+}
+.container1 .pie-ui .pie-slice.bottom {
+  left: 25%;
+  bottom: -21%;
+  border-bottom-right-radius: 50px;
+  -webkit-transform: rotate(45deg);
+}
+.container1 .pie-ui .pie-slice.bottom i {
+  margin-top: 20%;
+  margin-left: 22%;
+}
+.container1 .pie-ui .pie-slice.bottom:hover.scale {
+  left: 20%;
+}
+.container1 .pie-ui .pie-slice.bottom:hover.bg-color:not(.active) {
+  background-color: #241E4E;
+}
+.container1 .pie-ui .pie-slice.left {
+  top: 35%;
+  left: -11%;
+  border-bottom-left-radius: 50px;
+  -webkit-transform: rotate(45deg);
+}
+.container1 .pie-ui .pie-slice.left i {
+  margin-top: 25%;
+  margin-left: 40%;
+}
+.container1 .pie-ui .pie-slice.left:hover.scale {
+  top: 30%;
+}
+.container1 .pie-ui .pie-slice.left:hover.bg-color:not(.active) {
+  background-color: #064E86;
+}
